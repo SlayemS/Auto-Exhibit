@@ -17,7 +17,7 @@ const Footer = () => {
           />
           <p className="text-base text-gray-700">
             Auto Exhibit 2023 <br />
-            All Rights Reserved &copy;
+            All rights reserved &copy;
           </p>
         </div>
 
