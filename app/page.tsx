@@ -19,7 +19,7 @@ export default function Home() {
   const [year, setYear] = useState(2022);
 
   // pagination state
-  const [limit, setLimit] = useState(10);
+  const [limit, setLimit] = useState(8);
 
   const getCars = async () => {
     setLoading(true);
@@ -29,7 +29,7 @@ export default function Home() {
         manufacturer: manufacturer || "",
         year: year || 2022,
         fuel: fuel || "",
-        limit: limit || 10,
+        limit: limit || 8,
         model: model || "",
       });
       setAllCars(result);
@@ -55,7 +55,10 @@ export default function Home() {
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">Car Catalogue</h1>
-          <p>Discover the perfect car that matches your preferences</p>
+          <p>
+            Discover the perfect car that matches your preferences.
+            <b> **Please note:</b> these rental prices are unrealistic.
+          </p>
         </div>
 
         <div className="home__filters">
@@ -92,7 +95,7 @@ export default function Home() {
             )}
 
             <ShowMore
-              pageNumber={limit / 10}
+              pageNumber={limit / 8}
               isNext={limit > allCars.length}
               setLimit={setLimit}
             />

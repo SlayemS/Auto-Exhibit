@@ -20,6 +20,7 @@ const Navbar = () => {
         <CustomButton
           title="Sign In"
           btnType="button"
+          isDisabled={true}
           containerStyles="text-primary-blue rounded-full bg-white min-w-[130px]"
         />
       </nav>
